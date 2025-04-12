@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const mongoDBurl="lo"
+const mongoDBurl="lol"
 mongoose.connect(`${mongoDBurl}/seneva`)
 
 const contactSchema = new mongoose.Schema({
