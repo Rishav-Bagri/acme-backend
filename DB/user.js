@@ -1,7 +1,9 @@
 const mongoose = require("mongoose")
-const mongoDBurl="lol"
-mongoose.connect(`${mongoDBurl}/seneva`)
+require("dotenv").config() // load env variables
 
+const mongoDBurl = process.env.MONGO_URI
+
+mongoose.connect(mongoDBurl)
 const contactSchema = new mongoose.Schema({
     fullName: {
         type: String,
