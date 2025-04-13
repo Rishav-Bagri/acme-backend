@@ -10,8 +10,14 @@ const contactSchema = z.object({
   email: z.string().email(),
   phoneNumber: z.string(),
   subject: z.string(),
-  details: z.object({})
+  details: z.object({
+    Budget: z.string(),
+    Company: z.string(),
+    Timeline: z.string(),
+    Message: z.string()
+  })
 })
+
 
 // ⏳ Limit to 5 submissions per IP per 10 minutes
 const contactLimiter = rateLimit({
