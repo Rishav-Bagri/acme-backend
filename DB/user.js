@@ -21,8 +21,8 @@ const contactSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    message: {
-        type: String,
+    details: {
+        type: Object,
         required: true
     },
     createdAt: {
